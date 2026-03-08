@@ -22,3 +22,6 @@ def search_user(name: Optional[str] = None, age: Optional[int] = None):
 @app.get("/")
 def home():
     return {"message": "Welcome to the API! Go to /docs for the interactive UI."}
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=8000)
